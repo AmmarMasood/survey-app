@@ -9,13 +9,6 @@ import {FETCH_USER} from './type.js';
       
       }
  };
- //both are same above is just refactored to async await syntax
- // 	return (dispatch) => {
- //       axios
-//        .get('/api/current_user')
- //       .then(res => dispatch({type: FETCH_USER, payload: res}))
-   //     .catch(error => console.log(error.response));
-     // }
  export const handleToken = (token) => {
  return async (dispatch) => {
          const res = await axios.post('/api/stripe', token)
