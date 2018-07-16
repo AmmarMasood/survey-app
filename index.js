@@ -6,8 +6,6 @@ const keys = require('./config/keys.js');
 const passport = require('passport');
 const cookieSession = require('cookie-session');
 const bodyParser = require('body-parser');
-const path = require('path');
-const bytes = require('bytes');
 
 
 mongoose.connect(keys.mongoURI);
