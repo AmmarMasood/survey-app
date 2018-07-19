@@ -1,5 +1,6 @@
 const express = require('express');
 require('./models/User.js');
+require('./models/Surveys.js');
 require('./services/passport.js');
 const mongoose = require('mongoose');
 const keys = require('./config/keys.js');
@@ -21,6 +22,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes.js')(app);
 require('./routes/billingRoutes.js')(app);
+require('./routes/surveyRoutes.js')(app);
 
 if(process.env.NODE_ENV === "production"){
 app.use(express.static('client/build')); 
