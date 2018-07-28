@@ -1,4 +1,4 @@
-  const passport = require('passport');
+const passport = require('passport');
 
 module.exports = (app) => {
 app.get('/auth/google', passport.authenticate('google', {
@@ -6,7 +6,7 @@ app.get('/auth/google', passport.authenticate('google', {
 }))
 
 app.get('/auth/google/callback', passport.authenticate('google'), (req, res) => {
-	  res.redirect('/dashboard')//this is where we redirect user once he/she has successfully authenticate with google
+	  res.redirect('/surveys')//this is where we redirect user once he/she has successfully authenticate with google
 });
 
 app.get('/api/current_user', (req,res) => {

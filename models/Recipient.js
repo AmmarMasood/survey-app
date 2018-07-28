@@ -7,4 +7,4 @@ const recipientSchema = new Schema({
 	//yes or no... if they have clicked on anyone of the following this false will become true(we do that
 	//later) so user cannot respond again.
 })
-module.exports = recipientSchema
+module.exports = recipientSchema; 
