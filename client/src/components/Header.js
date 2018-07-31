@@ -16,9 +16,11 @@ renderContent = () => {
            return <li><a className="waves-effect waves-light btn red lighten-2" href= "/auth/google">Sign in with Google</a></li>;
       default:         //if use is loggedin
 	       return [
-	       <li key="1"><Payment /></li>,
-	       <li key="3"  style={{ margin:'0 10px' }}>Credits: {this.props.auth.credits}</li>,
-	       <li key="2"><a href ="/api/logout">Logout</a></li>
+         <li key= "5"><i className="material-icons">account_circle</i></li>,
+         <li key="2"  style={{ margin:'0 30px 0 0', fontSize: "1.5em", fontFamily: 'Anton'}}>{this.props.auth.displayName}</li>,
+         <li key="1"><Payment /></li>,
+         <li key="3"  style={{ margin:'0 10px' }}>Credits: {this.props.auth.credits}</li>,
+	       <li key="4"><a href ="/api/logout">Logout</a></li>
 	       ]
 	}
 }

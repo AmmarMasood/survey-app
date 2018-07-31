@@ -73,6 +73,11 @@ const p = new Path('/api/surveys/:surveyId/:choice'); //in here we are using the
   
   res.send({})
 });
+//this is for deleting the survey
+app.post('/api/survey/delete',requireLogin, async (req, res) => {
+  const surveys = await Survey.findOneAndRemove({_id: req.body.id});
+  res.send(surveys);
+})
 
 //it receives the form data from front-end and save it to mongooose
 app.post('/api/surveys', requireLogin, requireCredit, async (req,res) => {

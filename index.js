@@ -7,7 +7,8 @@ const keys = require('./config/keys.js');
 const passport = require('passport');
 const cookieSession = require('cookie-session');
 const bodyParser = require('body-parser');
-
+//this app's wont show any new surveys in developemnt because we have changed our sendgrid webhooks address
+//to our heroku deployed application.
 mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongoURI);
 

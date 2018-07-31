@@ -5,7 +5,8 @@ import { Provider } from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import reduxThunk from 'redux-thunk';
 
-
+//this app's wont show any new surveys in developemnt because we have changed our sendgrid webhooks address
+//to our heroku deployed application.
 import App from './components/App';
 import reducers from './reducers/index';
 import axios from 'axios'; //this is so we can access axios library in our browser console. This is dev only
