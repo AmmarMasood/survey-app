@@ -6,7 +6,10 @@ import * as actions from '../../actions/index';
 const SurveyFormReview = (props) => {
 		return(
 			<div>
-        <div><h3>SurveyFormReview</h3></div>
+        <div>
+			<div style= {{fontFamily: 'Palanquin Dark'}} ><h3>SurveyFormReview</h3></div>
+		    <p>*Please make sure you have enough credits before sending the survey. Each Survey costs 1$.</p>
+		</div>
         <div>
         	<div>
         	<label>Survey Title</label>
